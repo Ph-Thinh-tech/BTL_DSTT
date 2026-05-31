@@ -1,0 +1,83 @@
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay]
+        % Khung viền
+        \coordinate (NW) at ($(current page.north west) + (2.5cm,-1.5cm)$);
+        \coordinate (SE) at ($(current page.south east) + (-1.5cm,1.5cm)$);
+        
+        \draw[BKB, line width=2.5pt] (NW) rectangle (SE);
+        \draw[BKB, line width=0.8pt] ($(NW) + (0.15,-0.15)$) rectangle ($(SE) + (-0.15,0.15)$);
+        
+        \def\side{0.6cm}
+        \draw[BKB, line width=2pt] ($(NW) + (0,-\side)$) -- (NW) -- ($(NW) + (\side,0)$);
+        \draw[BKB, line width=2pt] ($(NW |- SE) + (0,\side)$) -- (NW |- SE) -- ($(NW |- SE) + (\side,0)$);
+        \draw[BKB, line width=2pt] ($(SE |- NW) + (-\side,0)$) -- (SE |- NW) -- ($(SE |- NW) + (0,-\side)$);
+        \draw[BKB, line width=2pt] ($(SE) + (0,\side)$) -- (SE) -- ($(SE) + (-\side,0)$);
+    \end{tikzpicture}
+    
+    \begin{center}
+        {\fontsize{14}{16}\selectfont \textbf{ĐẠI HỌC QUỐC GIA TP. HỒ CHÍ MINH} \par}
+        {\fontsize{14}{16}\selectfont \textbf{TRƯỜNG ĐẠI HỌC BÁCH KHOA} \par}
+        {\fontsize{14}{16}\selectfont \textbf{KHOA KHOA HỌC ỨNG DỤNG} \par}
+        
+        \vspace{0.4cm}
+        
+        \ifcsname includegraphics\endcsname
+            \includegraphics[height=4cm]{logo} 
+        \fi
+        
+        \vspace{0.4cm}
+        
+        % Phần Môn học, Mã môn, Học kỳ
+        {\fontsize{14}{15}\selectfont \textbf{BÀI TẬP LỚN HỌC PHẦN ĐẠI SỐ TUYẾN TÍNH} \par}
+        \vspace{0.4cm}
+        {\fontsize{14}{15}\selectfont \textbf{ĐỀ TÀI} \par}
+        
+        \begin{tikzpicture}
+            \draw[BKB, line width=1.5pt] (0,0) -- (16,0);
+        \end{tikzpicture}
+        \vspace{0.1cm}
+
+        {\fontsize{20}{15}\selectfont \textbf{NÉN ẢNH BẰNG PHÉP BIẾN ĐỔI HAAR} \par}
+
+        \vspace{0.2cm}
+        \begin{tikzpicture}
+            \draw[BKB, line width=1.5pt] (0,0) -- (16,0);
+        \end{tikzpicture}
+    \end{center}
+    
+    
+    \begin{center}
+        {\fontsize{14}{15}\selectfont \textbf{LỚP L09 - NHÓM 14 - HK252} \par}
+        \vspace{0.2cm}
+        {\fontsize{14}{15}\selectfont \textbf{NGÀY NỘP: 02/06/2026} \par}
+        \vspace{0.2cm}
+        {\fontsize{14}{15}\selectfont \textbf{Giảng viên hướng dẫn: ThS. Nguyễn Xuân Mỹ} \par}
+    \end{center}
+    
+    % Danh sách thành viên
+    \begin{center}
+        \vspace{0.3cm}
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            \textbf{Sinh viên thực hiện} & \textbf{Mã số sinh viên} & \textbf{Điểm số} & \textbf{Chữ ký} \\ \hline
+            Trương Đức Trọng & 2313655 &  & \\ \hline
+            Trương Ngọc Hoàng & 2211124 &  & \\ \hline
+            Trương Tấn Huy & 2211294 &  & \\ \hline
+            Ung Thanh Hào & 2310860 &  & \\ \hline
+            Văn Thị Thu Nhung & 2014041 &  & \\ \hline
+            Võ Công Chí Bảo & 2410310 &  & \\ \hline
+            Võ Huỳnh Anh Thư & 2213416 &  & \\ \hline
+            Võ Lê Phúc Thịnh & 2510382 &  & \\ \hline
+            Võ Ngô Ngọc Thạnh & 2511550 &  & \\ \hline
+            Võ Thành Tài & 2213006 &  & \\ \hline
+        \end{tabular}
+    \end{center}
+
+    \vfill 
+    
+    \begin{center}
+        {\fontsize{13}{15}\selectfont \textit{Thành phố Hồ Chí Minh - 2026}}
+    \end{center}
+
+\end{titlepage}

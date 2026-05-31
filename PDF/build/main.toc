@@ -1,0 +1,7 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {section}{LỜI CẢM ƠN}{1}{section*.2}%
+\contentsline {section}{PHẦN MỞ ĐẦU}{2}{section*.3}%
+\contentsline {section}{Chương 1: Cơ sở lý thuyết về biến đổi Haar Wavelet}{4}{section*.7}%
+\contentsline {section}{Chương 2: Giải thuật nén ảnh và code Matlab}{11}{section*.18}%
+\contentsline {section}{Chương 3: Kết quả và đánh giá}{16}{section*.25}%
+\contentsline {section}{Chương 4: Tổng kết}{20}{section*.35}%
