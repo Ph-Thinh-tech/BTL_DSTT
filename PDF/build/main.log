@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.10)  31 MAY 2026 23:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.10)  1 JUN 2026 18:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -921,7 +921,7 @@ Package hyperref Info: Link coloring OFF on input line 84.
 
 \c@lstlisting=\count357
  (cover.tex
-<logo.png, id=30, 845.3181pt x 597.6729pt>
+<logo.png, id=34, 845.3181pt x 597.6729pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 25.
@@ -955,93 +955,122 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.99     \newpage
                   [1] (Abstract.tex
-<kjw1.png, id=57, 290.0436pt x 466.3824pt>
+<kjw1.png, id=62, 290.0436pt x 466.3824pt>
 File: kjw1.png Graphic file (type png)
 <use kjw1.png>
 Package pdftex.def Info: kjw1.png  used on input line 34.
 (pdftex.def)             Requested size: 109.26108pt x 175.69pt.
-<kjw2.png, id=58, 290.0436pt x 466.3824pt>
+<kjw2.png, id=63, 290.0436pt x 466.3824pt>
 File: kjw2.png Graphic file (type png)
 <use kjw2.png>
 Package pdftex.def Info: kjw2.png  used on input line 41.
 (pdftex.def)             Requested size: 109.26108pt x 175.69pt.
-<kjw3.png, id=59, 290.0436pt x 466.3824pt>
+<kjw3.png, id=64, 290.0436pt x 466.3824pt>
 File: kjw3.png Graphic file (type png)
 <use kjw3.png>
 Package pdftex.def Info: kjw3.png  used on input line 48.
 (pdftex.def)             Requested size: 109.26108pt x 175.69pt.
  [2]) [3 <./kjw1.png (PNG copy)> <./kjw2.png (PNG copy)> <./kjw3.png (PNG copy)>] (Chap1.tex [4] [5] [6] [7]
-<Lv1.png, id=103, 984.67876pt x 321.45094pt>
+<Lv1.png, id=106, 984.67876pt x 321.45094pt>
 File: Lv1.png Graphic file (type png)
 <use Lv1.png>
-Package pdftex.def Info: Lv1.png  used on input line 210.
+Package pdftex.def Info: Lv1.png  used on input line 217.
 (pdftex.def)             Requested size: 455.24411pt x 148.61478pt.
-<Lv2.png, id=104, 979.40906pt x 321.45094pt>
+ [8]
+<Lv2.png, id=114, 979.40906pt x 321.45094pt>
 File: Lv2.png Graphic file (type png)
 <use Lv2.png>
-Package pdftex.def Info: Lv2.png  used on input line 218.
+Package pdftex.def Info: Lv2.png  used on input line 225.
 (pdftex.def)             Requested size: 455.24411pt x 149.41428pt.
- [8 <./Lv1.png> <./Lv2.png>] [9]
-<compare.png, id=119, 442.65375pt x 216.05719pt>
+ [9 <./Lv1.png> <./Lv2.png>] [10]
+<compare.png, id=128, 442.65375pt x 216.05719pt>
 File: compare.png Graphic file (type png)
 <use compare.png>
-Package pdftex.def Info: compare.png  used on input line 287.
+Package pdftex.def Info: compare.png  used on input line 294.
 (pdftex.def)             Requested size: 455.24411pt x 222.21498pt.
-) [10 <./compare.png>] (Chap2.tex (D:\miktex\tex/latex/listings\lstlang1.sty
+) [11 <./compare.png>] (Chap2.tex (D:\miktex\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
 LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 28.
  (D:\miktex\tex/latex/vntex\t5cmtt.fd
 File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [11] [12]
-<AppFlowchart.png, id=189, 581.17125pt x 553.06625pt>
+) [12] [13]
+<AppFlowchart.png, id=198, 622.325pt x 554.07pt>
 File: AppFlowchart.png Graphic file (type png)
 <use AppFlowchart.png>
 Package pdftex.def Info: AppFlowchart.png  used on input line 121.
-(pdftex.def)             Requested size: 455.24411pt x 433.2381pt.
- [13] [14 <./AppFlowchart.png>]
-<App_UI.png, id=229, 1155.1155pt x 614.295pt>
+(pdftex.def)             Requested size: 455.24411pt x 405.31319pt.
+ [14] [15 <./AppFlowchart.png>]
+<App_UI.png, id=239, 1155.1155pt x 613.0905pt>
 File: App_UI.png Graphic file (type png)
 <use App_UI.png>
 Package pdftex.def Info: App_UI.png  used on input line 139.
-(pdftex.def)             Requested size: 455.24411pt x 242.09552pt.
-) [15 <./App_UI.png>] (Chap3.tex [16]
-<dog.png, id=247, 404.2302pt x 299.1978pt>
+(pdftex.def)             Requested size: 455.24411pt x 241.62082pt.
+) [16 <./App_UI.png>] (Chap3.tex [17]
+<dog.png, id=257, 404.2302pt x 299.1978pt>
 File: dog.png Graphic file (type png)
 <use dog.png>
 Package pdftex.def Info: dog.png  used on input line 54.
 (pdftex.def)             Requested size: 455.24411pt x 336.96191pt.
- [17 <./dog.png (PNG copy)>]
-<Dog_evaluate.png, id=256, 404.2302pt x 299.1978pt>
+ [18 <./dog.png (PNG copy)>]
+<Dog_evaluate.png, id=265, 404.2302pt x 299.1978pt>
 File: Dog_evaluate.png Graphic file (type png)
 <use Dog_evaluate.png>
 Package pdftex.def Info: Dog_evaluate.png  used on input line 66.
 (pdftex.def)             Requested size: 455.24411pt x 336.96191pt.
-<Dog_evaluate2.png, id=257, 404.2302pt x 299.1978pt>
+<Dog_evaluate2.png, id=266, 404.2302pt x 299.1978pt>
 File: Dog_evaluate2.png Graphic file (type png)
 <use Dog_evaluate2.png>
 Package pdftex.def Info: Dog_evaluate2.png  used on input line 83.
 (pdftex.def)             Requested size: 455.24411pt x 336.96191pt.
- [18 <./Dog_evaluate.png (PNG copy)>]) [19 <./Dog_evaluate2.png (PNG copy)>] (Chap4.tex) [20] (Ending.tex) (Reference.tex) (d:\BTL_DSTT\PDF\build\main.aux)
+ [19 <./Dog_evaluate.png (PNG copy)>]
+<DogGraph.png, id=272, 1034.06325pt x 456.5055pt>
+File: DogGraph.png Graphic file (type png)
+<use DogGraph.png>
+Package pdftex.def Info: DogGraph.png  used on input line 98.
+(pdftex.def)             Requested size: 455.24411pt x 200.97449pt.
+ [20 <./Dog_evaluate2.png (PNG copy)>]
+<Noise1.png, id=278, 439.8834pt x 361.8318pt>
+File: Noise1.png Graphic file (type png)
+<use Noise1.png>
+Package pdftex.def Info: Noise1.png  used on input line 113.
+(pdftex.def)             Requested size: 204.85846pt x 168.50954pt.
+<Noise2.png, id=279, 439.8834pt x 361.8318pt>
+File: Noise2.png Graphic file (type png)
+<use Noise2.png>
+Package pdftex.def Info: Noise2.png  used on input line 119.
+(pdftex.def)             Requested size: 204.85846pt x 168.50954pt.
+ [21 <./DogGraph.png>]
+<Letter1.png, id=287, 425.79076pt x 444.4605pt>
+File: Letter1.png Graphic file (type png)
+<use Letter1.png>
+Package pdftex.def Info: Letter1.png  used on input line 132.
+(pdftex.def)             Requested size: 204.85846pt x 213.84047pt.
+<Letter2.png, id=288, 425.79076pt x 447.47176pt>
+File: Letter2.png Graphic file (type png)
+<use Letter2.png>
+Package pdftex.def Info: Letter2.png  used on input line 138.
+(pdftex.def)             Requested size: 204.85846pt x 215.28926pt.
+) [22 <./Noise1.png (PNG copy)> <./Noise2.png (PNG copy)> <./Letter1.png> <./Letter2.png>] (Chap4.tex) [23] (Ending.tex) (Reference.tex) [24] (d:\BTL_DSTT\PDF\build\main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EC03772E2A39168BD0D72FCAB36AC49C;1273.
+(rerunfilecheck)             Checksum: 5256C083662C4D8108D0829D0095C9B6;1568.
  ) 
 Here is how much of TeX's memory you used:
- 27895 strings out of 467691
- 494282 string characters out of 5431805
- 1270519 words of memory out of 5000000
- 56354 multiletter control sequences out of 15000+600000
+ 27966 strings out of 467691
+ 495445 string characters out of 5431805
+ 1270940 words of memory out of 5000000
+ 56404 multiletter control sequences out of 15000+600000
  650576 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,13n,107p,466b,2610s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\PHUC THINH\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><D:/miktex/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/miktex/fonts/type1/vntex/vnr/vnbx10.pfb><D:/miktex/fonts/type1/vntex/vnr/vnbx12.pfb><D:/miktex/fonts/type1/vntex/vnr/vnr10.pfb><D:/miktex/fonts/type1/vntex/vnr/vnr12.pfb><D:/miktex/fonts/type1/vntex/vnr/vnr6.pfb><D:/miktex/fonts/type1/vntex/vnr/vnti12.pfb><D:/miktex/fonts/type1/vntex/vnr/vntt10.pfb>
-Output written on d:\BTL_DSTT\PDF\build\main.pdf (22 pages, 2136839 bytes).
+ 102i,13n,107p,480b,2610s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\PHUC THINH\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><D:/miktex/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmmi12.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmmi6.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/miktex/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/miktex/fonts/type1/vntex/vnr/vnbx10.pfb><D:/miktex/fonts/type1/vntex/vnr/vnbx12.pfb><D:/miktex/fonts/type1/vntex/vnr/vnr10.pfb><D:/miktex/fonts/type1/vntex/vnr/vnr12.pfb><D:/miktex/fonts/type1/vntex/vnr/vnr6.pfb><D:/miktex/fonts/type1/vntex/vnr/vnti12.pfb><D:/miktex/fonts/type1/vntex/vnr/vntt10.pfb><D:/miktex/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on d:\BTL_DSTT\PDF\build\main.pdf (26 pages, 3205374 bytes).
 PDF statistics:
- 375 PDF objects out of 1000 (max. 8388607)
- 139 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 434 PDF objects out of 1000 (max. 8388607)
+ 160 named destinations out of 1000 (max. 500000)
+ 154 words of extra memory for PDF output out of 10000 (max. 10000000)
 

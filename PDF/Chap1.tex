@@ -14,14 +14,14 @@ thành phần trung bình (average) giữ lại cấu trúc tổng thể và th�
 Đặc biệt hơn từ hai thành phần này ta có thể khôi phục lại được tín hiệu ban đầu một cách vô cùng chính xác. 
 
 \subsection*{2. Phép biến đổi Haar 1D}
-Để xem việc phân tích một tín hiệu bằng cách tính trung bình và sai khác như thế nào ta có thể xét một đoạn tín hiệu như sau:
-$$X_{0}=(154, 150, 156, 152, 160, 160, 152, 156)^T$$
-Ta chia đoạn tín hiệu trên thành từng cặp và tìm nửa tổng, nửa hiệu của các cặp đó. Ta sẽ thu được một dãy sau:
-$$X_{1}=(152, 154, 160, 154, 2, 2, 0, -2)$$
-Trong dãy $X_{1}$ trên, bốn số đầu tiên là nửa tổng của bốn cặp, bốn số tiếp theo là nửa hiệu của bốn cặp.
-Ta có thể dùng ma trận để mô tả quá trình này như sau:
+Để xem việc phân tích một tín hiệu bằng cách tính trung bình và sai khác như thế nào ta có thể xét một đoạn tín hiệu một chiều như sau:
+$$X_{0}=(200,196,204,196,100,96,104,96)^T$$
+Lấy nửa tổng và nửa hiệu của từng cặp giá trị ta thu được chuỗi tín hiệu sau:
+$$X_{1} = (198, 200, 98, 100, 2, 4, 2, 4)^T$$
+Trong dãy $X_{1}$, 4 số đầu tiên (198, 200, 98, 100) cho thấy mức xấp xỉ chung của tín hiệu $X_0$ ban đầu, 4 số tiếp theo (2, 4, 2, 4) cho thấy mức dao động còn gọi là chi tiết giữa 
+các cặp giá trị. Việc biến đổi $X_0$ tương đương với việc nhân $X_0$ với một ma trận như sau:
 \begin{center}
-    $$A = \begin{pmatrix}
+    $$W = \begin{pmatrix}
         \frac{1}{2} &  \frac{1}{2} &  0 &  0 &  0 &  0 &  0 &  0 \\
         0 &  0 &  \frac{1}{2} &  \frac{1}{2} &  0 &  0 &  0 &  0 \\
         0 &  0 &  0 &  0 &  \frac{1}{2} &  \frac{1}{2} &  0 &  0 \\
@@ -33,10 +33,10 @@ Ta có thể dùng ma trận để mô tả quá trình này như sau:
     \end{pmatrix}$$
 \end{center}
 
-Ta thấy rằng nếu lấy tích vô hướng của từng hàng với nhau kết quả đều là 0, điều này cho thấy các hàng của ma trận $A$ tạo nên họ trực giao.
-Nếu ta chia mỗi hàng cho độ dài của chúng ta được họ trực chuẩn, ma trận trực giao $H$ tương ứng như sau:
+\noindent Ta thấy rằng nếu lấy tích vô hướng của từng hàng với nhau kết quả đều là 0, điều này cho thấy các hàng của ma trận $W$ tạo nên họ trực giao.
+Nếu ta chia mỗi hàng cho độ dài của chúng ta được họ trực chuẩn, ma trận trực giao $H_1$ tương ứng như sau:
 \begin{center}
-    $$H = \begin{pmatrix}
+    $$H_1 = \begin{pmatrix}
         \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &  0 &  0 &  0 &  0 &  0 &  0 \\
         0 &  0 &  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &  0 &  0 &  0 &  0 \\
         0 &  0 &  0 &  0 &  \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &  0 &  0 \\
@@ -48,25 +48,30 @@ Nếu ta chia mỗi hàng cho độ dài của chúng ta được họ trực ch
     \end{pmatrix}$$
 \end{center}
 
-Khi đã xây dựng được ma trận $H$, vì $H$ là ma trận trực giao nên nghịch đảo của $H$ là $H^T$. 
-Ta dùng ma trận $H$ để nén dữ liệu thay vì dùng ma trận $A$. Nén dữ liệu $X_{0}$ ta được $Y_{1}=HX_{0}$.
-Giải nén dữ liệu từ $Y_{1}$ ta được $X_{0}=H^TY_{1}$.
-Phép biến đổi tín hiệu dùng ma trận trực giao $H$ là vô cùng quan trọng vì nó có nhiều tính chất như sau:
+\noindent Khi đã xây dựng được ma trận $H_1$, vì $H_1$ là ma trận trực giao nên nghịch đảo của $H_1$ là $H_1^T$. 
+Ta dùng ma trận $H_1$ và $H_1^T$ để nén và giải nén dữ liệu:
+\begin{itemize}
+    \item Nén dữ liệu $X_{0}$ ta được $Y_{1}=H_1X_{0}$.
+    \item Giải nén dữ liệu từ $Y_{1}$ ta được $X_{0}=H_1^TY_{1}$.
+\end{itemize} 
 
-Tính bảo toàn độ dài vector. Cho $X$ là một vector, ta có
-$$||HX||=\sqrt{(HX)^T(HX)}=\sqrt{X^TH^THX}=\sqrt{X^TX}=||X||$$
+Phép biến đổi tín hiệu dùng ma trận trực giao $H_1$ là vô cùng quan trọng vì nó có nhiều tính chất như sau:
 
-Tính bảo toàn tích vô hướng. Cho $u$ và $v$ là hai vector, ta có
-$$(Hu,Hv)=(Hu)^T.(Hv)=u^TH^THv=u^Tv=(u,v)$$
+\noindent Tính bảo toàn độ dài vector. Cho $X$ là một vector, ta có
+$$||H_1X||=\sqrt{(H_1X)^T(H_1)}=\sqrt{X^TH_1^TH_1X}=\sqrt{X^TX}=||X||$$
 
-Tính bảo toàn góc giữa hai vector. Cho hai vector $u$ và $v$ thỏa $cos\theta=\frac{(u,v)}{||u||.||v||}$, ta có
-$$cos\psi=\frac{(Hu,Hv)}{||Hu||.||Hv||}=\frac{(u,v)}{||u||.||v||}=cos\theta$$
+\noindent Tính bảo toàn tích vô hướng. Cho $u$ và $v$ là hai vector, ta có
+$$(H_1u,H_1v)=(H_1u)^T.(H_1v)=u^TH_1^TH_1v=u^Tv=(u,v)$$
 
-Phép biến đổi bằng ma trận trực giao $H$ bảo toàn góc và khoảng cách giữa các vector nên  nó không làm thay đổi hình dạng của ảnh trong quá trình nén.
+\noindent Tính bảo toàn góc giữa hai vector. Cho hai vector $u$ và $v$ thỏa $cos\theta=\frac{(u,v)}{||u||.||v||}$, ta có
+$$cos\phi=\frac{(H_1u,H_1v)}{||H_1u||.||H_1v||}=\frac{(u,v)}{||u||.||v||}=cos\theta$$
 
-Tiếp tục quá trình nén ở trên, cho ma trận $H_{1}$ là ma trận $H$ đã phân tích, khi đó $Y_{1}=H_{1}X_{0}=\sqrt{2}(152, 154, 160, 154, 2, 2, 0, -2)^T$.
-Quá trình nén tiếp theo ta giữ lại bốn số sau của dãy và thực hiện lấy nửa tổng và nửa hiệu của các cặp số trong bốn số đầu ta được 
-$Y_{2}=H_{2}Y_{1}=(306,314,-2,6,2\sqrt{2},2\sqrt{2},0,-2\sqrt{2})^T$. Ma trận $H_{2}$ được mô tả như sau
+Phép biến đổi bằng ma trận trực giao $H_1$ bảo toàn góc và khoảng cách giữa các vector nên  nó không làm thay đổi hình dạng của ảnh trong quá trình nén.
+
+Thực hiện tiếp quá trình nén, khi đó $Y_{1} = \sqrt{2} (198, 200, 98, 100, 2, 4, 2, 4)^T$.
+
+\noindent Quá trình nén tiếp theo ta giữ lại bốn số sau của dãy và thực hiện lấy nửa tổng và nửa hiệu của các cặp số trong bốn số đầu bằng cách nhân $Y_1$
+vào ma trận $H_2$ đã chuẩn hóa được mô tả như sau:
 \begin{center}
     $$H_2 = \begin{pmatrix}
         \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &  0 &  0 &  0 &  0 &  0 &  0 \\
@@ -79,9 +84,9 @@ $Y_{2}=H_{2}Y_{1}=(306,314,-2,6,2\sqrt{2},2\sqrt{2},0,-2\sqrt{2})^T$. Ma trận 
         0 &  0 &  0 &  0 &  0 &  0 &  0 &  1
     \end{pmatrix}$$
 \end{center}
+Ta thu được $Y_{2} = H_2 Y_1 = (398, 198, -2, -2, 2\sqrt{2}, 4\sqrt{2}, 2\sqrt{2}, 4\sqrt{2})^T$.
 
-Tiếp tục quá trình trên, giữ sáu số cuối của $Y_{2}$ lại và hai số đầu được thay bằng nửa tổng và nửa hiệu của chúng ta được
-$Y_{3}=H_{3}Y_{2}=(310\sqrt{2},-4\sqrt{2},-2,6,2\sqrt{2},2\sqrt{2},0,-2\sqrt{2})^T$ với ma trận $H_{3}$ được mô tả như sau
+Quá trình nén tiếp theo ta giữ sáu số cuối của $Y_{2}$ lại và hai số đầu được thay bằng nửa tổng và nửa hiệu của chúng bằng cách sử dụng ma trận:
 \begin{center}
     $$H_3 = \begin{pmatrix}
         \frac{\sqrt{2}}{2} &  \frac{\sqrt{2}}{2} &  0 &  0 &  0 &  0 &  0 &  0 \\
@@ -95,13 +100,15 @@ $Y_{3}=H_{3}Y_{2}=(310\sqrt{2},-4\sqrt{2},-2,6,2\sqrt{2},2\sqrt{2},0,-2\sqrt{2})
     \end{pmatrix}$$
 \end{center}
 
-Nhìn chung ta có được $Y_3=H_3H_2H_1X_0 \iff Y_3=QX_0$. Vector $Y_3$ có phần tử đầu tiên là trung bình tổng thể mang giá trị xấp xỉ cho
+Cuối cùng ta thu được $Y_{3} = H_3 Y_2 = (298\sqrt{2}, 100\sqrt{2}, -2, -2, 2\sqrt{2}, 4\sqrt{2}, 2\sqrt{2}, 4\sqrt{2})^T$.
+
+Nhìn chung ta có được $Y_3=H_3H_2H_1X_0 \iff Y_3=HX_0$. Vector $Y_3$ có phần tử đầu tiên là trung bình tổng thể mang giá trị xấp xỉ cho
 cả dãy số ban đầu. Bảy phần tử còn lại là các hệ số chi tiết từ vĩ mô đến vi mô nhất của dãy số, cho biết sự thay đổi từ lớn đến nhỏ của các phần tử ở từng độ phân giải của dãy số.
 
-Ta còn có thể giải nén dữ liệu $Y_3$ để tìm lại dãy ban đầu bằng cách $X_0=Q^{-1}Y_3 \iff X_0=Q^TY_3$ với 
+Ta còn có thể giải nén dữ liệu $Y_3$ để tìm lại dãy ban đầu bằng cách $X_0=H^{-1}Y_3 \iff X_0=H^TY_3$ với 
 
 \begin{center}
-    $$Q = \begin{pmatrix}
+    $$H = \begin{pmatrix}
         \frac{\sqrt{2}}{4} &  \frac{\sqrt{2}}{4} &  \frac{\sqrt{2}}{4} &  \frac{\sqrt{2}}{4} &  \frac{\sqrt{2}}{4} &  \frac{\sqrt{2}}{4} &  \frac{\sqrt{2}}{4} &  \frac{\sqrt{2}}{4} \\
         \frac{\sqrt{2}}{4} &  \frac{\sqrt{2}}{4} &  \frac{\sqrt{2}}{4} &  \frac{\sqrt{2}}{4} & -\frac{\sqrt{2}}{4} & -\frac{\sqrt{2}}{4} & -\frac{\sqrt{2}}{4} & -\frac{\sqrt{2}}{4} \\
         \frac{1}{2} &  \frac{1}{2} & -\frac{1}{2} & -\frac{1}{2} &  0 &  0 &  0 &  0 \\
@@ -114,7 +121,7 @@ Ta còn có thể giải nén dữ liệu $Y_3$ để tìm lại dãy ban đầu
 \end{center}
 \subsection*{3. Xây dựng ma trận phép biến đổi Haar}
 
-Một ma trận phép biến đổi Haar cuối cùng có thể được tạo thành bằng việc nhân nhiều ma trận với nhau ($Q=H_3H_2H_1$).
+Một ma trận phép biến đổi Haar cuối cùng có thể được tạo thành bằng việc nhân nhiều ma trận với nhau ($H=H_3H_2H_1$).
 Đối với một vector có $2^m$ phần tử ta rốt cuộc phải tìm ra $m$ ma trận trước khi tìm được ma trận cuối cùng. Việc này có thể tốn nhiều thời gian và công sức.
 Vì vậy, còn một cách khác để tạo ra ma trận Haar trực giao
 đó chính là sử dụng những hàm Haar $h_k(x)$. Những hàm này được định nghĩa với $x \in [0,1]$, $k=0,1,2...,N-1$ và $N=2^n$ (N là lũy thừa cơ số 2).

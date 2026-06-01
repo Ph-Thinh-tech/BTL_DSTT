@@ -1,5 +1,5 @@
-\section*{Chương 3: Kết quả và đánh giá}
-\addcontentsline{toc}{section}{Chương 3: Kết quả và đánh giá}
+\section*{Chương 3: Kết quả đánh giá và nhận xét nâng cao}
+\addcontentsline{toc}{section}{Chương 3: Kết quả đánh giá và nhận xét nâng cao}
 
 \subsection*{1. Phương pháp đánh giá}
 \subsubsection*{1.1. Tỷ lệ triệt tiêu dữ liệu (Sparsity)}
@@ -92,3 +92,51 @@ dù chỉ số PSNR không quá thấp nhưng ta vẫn thấy được sự vỡ
 \end{itemize}
 \noindent Các chi tiết trên khuôn mặt chú chó lúc này gần như không thể phân biệt so với ảnh gốc, tương ứng với PSNR đã tăng đến 35.47 đánh đổi bằng việc
 dung lượng lưu trữ tăng lên nhưng vẫn giữ tỷ lệ đáng kể ít hơn một phần mười so với ảnh gốc.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{DogGraph.png}
+    \caption{Đồ thị phân tích PSNR và Sparsity.}
+\end{figure}
+
+\noindent Khi áp dụng nhiều ngưỡng cắt và thể hiện hai thông tin quan trọng là PSNR và Sparsity của ảnh chú chó ta thu được một đồ thị như trên. Đồ thị với trục hoành là các mức ngưỡng cắt, trục tung bên trái là chỉ số PSNR, bên phải là Sparsity ứng với mỗi ngưỡng cắt.
+Đồ thị biểu diễn hai đường cong cắt nhau, đường có xu hướng tăng là Sparsity, đường còn lại là PSNR. PSNR giảm trong khi Sparsity tăng khi tăng ngưỡng cắt cho thấy dung lượng lưu trữ càng tối ưu
+thì chất lượn ảnh sau khôi phục càng giảm. Lý tưởng nhất của ngưỡng cắt là tại giao điểm của hai đường khi vừa đáp ứng đủ dung lượng nén, vừa đảm bảo chất lượng ảnh gần như trọn vẹn.
+
+\subsection*{3. Nâng cao}
+\noindent Như đã biết ngoài chức năng nén ảnh, phép biến đổi Haar còn tạo cơ sở để ta thực hiện một số kỹ thuật chỉnh sửa và phân tích ảnh. Cụ thể đối với những bức ảnh nhiễu, 
+bản chất những bức ảnh này chứa rất nhiều chi tiết thừa là những đốm nhỏ li ti. Việc nén ảnh bị nhiễu và cắt ngưỡng sâu cho thành phần chi tiết sẽ giúp ảnh ít nhiễu hơn khi khôi phục.
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Noise1.png}
+        \caption*{Ảnh bị nhiễu}
+    \end{subfigure}
+    \hspace{1cm} 
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Noise2.png}
+        \caption*{Ảnh đã khử nhiễu}
+    \end{subfigure}
+    \caption{Kết quả khử nhiễu ảnh.}
+\end{figure}
+
+\noindent Ngoài ra nếu thay thành phần trung bình của bức ảnh bằng 0 và tiến hành khôi phục ảnh với cách thành phần chi tiết giữ nguyên, ta sẽ thấy được đường viền của vật thể trong ảnh.
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Letter1.png}
+        \caption*{Ảnh chữ A}
+    \end{subfigure}
+    \hspace{1cm} 
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Letter2.png}
+        \caption*{Đường viền của chữ A}
+    \end{subfigure}
+    \caption{Kết quả phân tích đường viền.}
+\end{figure}
